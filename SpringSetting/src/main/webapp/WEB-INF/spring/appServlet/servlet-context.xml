@@ -33,8 +33,11 @@
 	
 	<beans:bean id="downloadView" class="com.sp.set.board.controller.BoardDownloadView" />
 	
-	<!-- 사용하고자 하는 controller 패키지를 반드시 등록 -->
-	<context:component-scan base-package="com.sp.set.board.controller" />
+	<!-- context:component-scan -->
+	<!-- 해당 패키지에 component(controller, repository, service)가 선언되었는지 스캔 -->
+	<!-- 사용하고자 하는 component가 선언되어 있는 패키지를 반드시 등록 -->
+	<!-- 개별적으로 여러 개 등록도 가능하나 공통된 패키지 경로 하나만 등록해 주어도 작동 -->
+	<context:component-scan base-package="com.sp.set" />
 	
 	
 	
